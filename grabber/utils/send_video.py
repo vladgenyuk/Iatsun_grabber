@@ -1,7 +1,7 @@
 import json
 import aiohttp
 
-from grabber.config import BOT_URL
+from config import BOT_URL
 
 
 async def send_video(session: aiohttp.ClientSession, chat_id, text, reply_markup: dict = None, document: str = None):

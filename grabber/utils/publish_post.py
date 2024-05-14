@@ -1,7 +1,7 @@
 import aiohttp
 import json
 
-from grabber.config import CHANNEL_ID, BOT_TOKEN
+from config import CHANNEL_ID, BOT_TOKEN
 
 
 async def validate_and_publish_post(session: aiohttp.ClientSession, message_text: str = '', reply_markup: dict = None):

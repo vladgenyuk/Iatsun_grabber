@@ -1,8 +1,8 @@
 import aiohttp
 
-from grabber.config import USER_STATES
-from grabber.utils.send_message import send_message
-from grabber.keyboards import create_decision_keyboard
+from config import USER_STATES
+from utils.send_message import send_message
+from keyboards import create_decision_keyboard
 
 
 async def edit_post(session: aiohttp.ClientSession, user_id: int, message_id: int = 0, callback_data: str = None, message_text: str = None):

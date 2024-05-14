@@ -1,9 +1,9 @@
 import asyncio
 import aiohttp
-from grabber.config import BOT_URL, USER_STATES, ADMIN_IDS
-from grabber import handlers
-from grabber.utils.grabber import read_channels
-from grabber.utils.make_document import document_maker
+from config import BOT_URL, USER_STATES, ADMIN_IDS
+import handlers
+from utils.grabber import read_channels
+from utils.make_document import document_maker
 
 
 async def get_updates(session, offset=None):

@@ -1,11 +1,11 @@
 import aiohttp
 
-from grabber.utils.send_message import send_message
-from grabber.utils.send_media_group import send_media_group
-from grabber.utils.send_photo import send_photo
-from grabber.utils.send_video import send_video
+from utils.send_message import send_message
+from utils.send_media_group import send_media_group
+from utils.send_photo import send_photo
+from utils.send_video import send_video
 
-from grabber.keyboards import create_decision_keyboard
+from keyboards import create_decision_keyboard
 
 
 async def grabber_handler(session: aiohttp.ClientSession, message_text: str, user_ids: list[int], document: list[dict] | dict = None):

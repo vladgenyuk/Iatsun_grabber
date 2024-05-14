@@ -1,6 +1,6 @@
 import aiohttp
 
-from grabber.utils.send_message import send_message
+from utils.send_message import send_message
 
 
 async def start_handler(session: aiohttp.ClientSession, chat_id: int):

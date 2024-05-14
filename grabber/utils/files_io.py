@@ -1,6 +1,6 @@
 import json
 
-from grabber.config import BASE_DIR
+from config import BASE_DIR
 
 
 async def read_file(filename: str = f'{BASE_DIR}/channels.txt') -> str:

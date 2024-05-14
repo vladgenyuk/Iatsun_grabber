@@ -1,6 +1,6 @@
 import json
 import aiohttp
-from grabber.config import BOT_URL
+from config import BOT_URL
 
 
 async def send_media_group(session: aiohttp.ClientSession, chat_id: int, media: list[dict], reply_markup: dict = None):

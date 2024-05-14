@@ -1,6 +1,6 @@
 import aiohttp
 
-from grabber.config import BOT_URL
+from config import BOT_URL
 
 
 async def delete_message(session: aiohttp.ClientSession, user_id: int, message_id: int):

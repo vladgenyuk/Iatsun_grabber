@@ -1,8 +1,8 @@
 import aiohttp
 
-from grabber.config import USER_STATES, BOT_OVERWRITE_PASSWORD
-from grabber.utils.send_message import send_message
-from grabber.utils.files_io import read_file, overwrite_file
+from config import USER_STATES, BOT_OVERWRITE_PASSWORD
+from utils.send_message import send_message
+from utils.files_io import read_file, overwrite_file
 
 
 async def overwrite_pre_handler(session: aiohttp.ClientSession, chat_id: int, **kwargs):

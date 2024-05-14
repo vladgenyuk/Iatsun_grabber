@@ -3,8 +3,8 @@ import asyncio
 from telethon import TelegramClient
 from telethon.tl.types import InputDocument, InputPhoto
 
-from grabber.utils.files_io import read_file, overwrite_json
-from grabber.config import API_ID, API_HASH, DELAY_GRABBER, LIMIT, LAST_IDS, ADMIN_IDS, BOT_USERNAME
+from utils.files_io import read_file, overwrite_json
+from config import API_ID, API_HASH, DELAY_GRABBER, LIMIT, LAST_IDS, ADMIN_IDS, BOT_USERNAME
 
 
 async def read_channels(search_term: str | None, limit: int = LIMIT):
@@ -19,7 +19,6 @@ async def read_channels(search_term: str | None, limit: int = LIMIT):
                     limit=limit,
                     search=search_term,
                     min_id=LAST_IDS.get(f'@{channel.username}', 1),
-                    reverse=True
                 )
 
                 post = None

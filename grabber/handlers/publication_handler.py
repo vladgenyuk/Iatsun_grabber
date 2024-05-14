@@ -1,7 +1,7 @@
 import aiohttp
 
-from grabber.utils.delete_message import delete_message
-from grabber.utils.publish_post import validate_and_publish_post
+from utils.delete_message import delete_message
+from utils.publish_post import validate_and_publish_post
 
 
 async def publish_handler(session: aiohttp.ClientSession, message_id: int, user_id: int, message_text: str, callback_data: str = None):

@@ -1,7 +1,7 @@
 import aiohttp
 
-from grabber.utils.send_message import send_message
-from grabber.keyboards import create_decision_keyboard
+from utils.send_message import send_message
+from keyboards import create_decision_keyboard
 
 
 async def decision_handler(session: aiohttp.ClientSession, chat_id: int):

@@ -1,7 +1,7 @@
 import aiohttp
 
-from grabber.utils.send_message import send_message
-from grabber.utils.files_io import read_file
+from utils.send_message import send_message
+from utils.files_io import read_file
 
 
 async def read_channels_handler(session: aiohttp.ClientSession, chat_id: int):
