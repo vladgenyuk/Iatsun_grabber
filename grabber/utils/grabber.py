@@ -24,7 +24,7 @@ async def read_channels(search_term: str | None, limit: int = LIMIT):
 
                 post = None
 
-                async for post in reversed(posts):
+                async for post in posts:
                     post = post.to_dict()
                     if not post.get('message'):
                         continue
