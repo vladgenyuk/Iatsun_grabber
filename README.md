@@ -1,2 +1,2 @@
 
-run bot ```python -m grabber.bot ```
+run bot ```python bot.py ```
