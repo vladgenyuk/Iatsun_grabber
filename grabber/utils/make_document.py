@@ -1,5 +1,5 @@
 async def document_maker(update: dict) -> dict | list:
-
+    print(update)
     if update.get('message').get('video'):
         videos = []
         if isinstance(update.get('message').get('video'), dict):

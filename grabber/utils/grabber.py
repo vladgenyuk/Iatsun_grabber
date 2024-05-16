@@ -11,6 +11,8 @@ async def read_channels(search_term: str | None, limit: int = LIMIT):
     channels_to_read = (await read_file()).split()
     while True:
         async with TelegramClient('session_name', API_ID, API_HASH) as client:
+            await asyncio.sleep(DELAY_GRABBER)
+
             for channel in channels_to_read:
                 channel = await client.get_entity(channel)
 
@@ -53,4 +55,3 @@ async def read_channels(search_term: str | None, limit: int = LIMIT):
                     data['admin_ids'] = ADMIN_IDS
                     await overwrite_json(data)
 
-        await asyncio.sleep(DELAY_GRABBER)

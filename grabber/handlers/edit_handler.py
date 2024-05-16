@@ -3,6 +3,7 @@ import aiohttp
 from config import USER_STATES
 from utils.send_message import send_message
 from keyboards import create_decision_keyboard
+from utils.delete_message import delete_message
 
 
 async def edit_post(session: aiohttp.ClientSession, user_id: int, message_id: int = 0, callback_data: str = None, message_text: str = None):
@@ -23,6 +24,7 @@ async def edit_post_handler(session: aiohttp.ClientSession, chat_id: int, messag
 
     state = USER_STATES.get(chat_id)
     if state == 'AWAITING_EDITING':
+        await delete_message(session=session, user_id=chat_id, message_id=message_id-2)
         await send_message(session=session, chat_id=chat_id, text=message_text, reply_markup=await create_decision_keyboard())
 
     if USER_STATES.get(chat_id):
